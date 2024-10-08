@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Pedido</title>
+</head>
+<body>
+    <h1>Cadastrar Pedido</h1>
+    <form action="/pedidos" method="POST">
+        <label for="produtoId">Produto ID:</label>
+        <input type="number" id="produtoId" name="produtoId" required>
+        <br>
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade" required>
+        <br>
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" name="valor" step="0.01" required>
+        <br>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <a href="pedido-list.html">Voltar à Lista de Pedidos</a>
+</body>
+</html>
