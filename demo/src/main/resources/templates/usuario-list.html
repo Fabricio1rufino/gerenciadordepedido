@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Usuários</title>
+    <title>Listar Usuários</title>
 </head>
 <body>
     <h1>Lista de Usuários</h1>
-    <ul id="usuarios-lista">
-        <!-- Aqui os usuários serão listados -->
-    </ul>
-    <a href="usuario-cadastrar.html">Cadastrar Novo Usuário</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Tipo de Usuário</th>
+            </tr>
+        </thead>
+        <tbody id="usuarios">
+            <!-- Os usuários serão inseridos aqui pelo JavaScript -->
+        </tbody>
+    </table>
+
 </body>
 </html>

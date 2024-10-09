@@ -8,6 +8,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
@@ -18,7 +19,9 @@ public class Pedido {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "produto_id")
     private Produto produto;
+
     private int quantidade;
     private LocalDate data;
     private float valor;
@@ -26,24 +29,9 @@ public class Pedido {
     @Enumerated(EnumType.STRING)
     private StatusEnum status;
 
-
     public Pedido() {
     }
 
-
-    public Pedido(Produto produto, int quantidade, LocalDate data, float valor, StatusEnum status) {
-        this.produto = produto;
-        this.quantidade = quantidade;
-        this.data = data;
-        this.valor = valor;
-        this.status = status;
-    }
-
-    public void mudarStatus(StatusEnum status) {
-        this.status = status;
-    }
-
-  
     public Long getId() {
         return id;
     }
@@ -90,5 +78,9 @@ public class Pedido {
 
     public void setStatus(StatusEnum status) {
         this.status = status;
+    }
+
+    public void mudarStatus(StatusEnum novoStatus) {
+        this.status = novoStatus;
     }
 }

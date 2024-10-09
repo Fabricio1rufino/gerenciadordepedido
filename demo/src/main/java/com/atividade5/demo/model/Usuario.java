@@ -1,6 +1,8 @@
 package com.atividade5.demo.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -11,21 +13,15 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
     private String email;
     private String telefone;
+
+    @Enumerated(EnumType.STRING)
     private TipoUsuarioEnum tipoUsuario;
 
-   
     public Usuario() {
-    }
-
-
-    public Usuario(String nome, String email, String telefone, TipoUsuarioEnum tipoUsuario) {
-        this.nome = nome;
-        this.email = email;
-        this.telefone = telefone;
-        this.tipoUsuario = tipoUsuario;
     }
 
 

@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Pedidos</title>
+    <title>Listar Pedidos</title>
 </head>
 <body>
     <h1>Lista de Pedidos</h1>
-    <ul id="pedidos-lista">
-        <!-- Aqui os pedidos serão listados -->
-    </ul>
-    <a href="pedido-cadastrar.html">Cadastrar Novo Pedido</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Status</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="pedidos">
+        </tbody>
+    </table>
+
+  
 </body>
 </html>
